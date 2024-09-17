@@ -1,11 +1,11 @@
 {
-    "name": "nettantra/filament-slider-input-field",
+    "name": "f1mp3r/filament-slider-input-field",
     "description": "This is a wrapper around noUiSlider which allows creating a slider field on Filament Forms.",
     "require": {
-        "php": "^8.0|^8.1",
+        "php": "^8.0|^8.1|^8.3",
         "filament/forms": "^3.0-stable",
-        "illuminate/contracts": "^9.0|^10.0",
-        "jantinnerezo/livewire-range-slider": "^1.0",
+        "illuminate/contracts": "^9.0|^10.0|^11.0",
+        "santoshjena/livewire-range-slider": "^1.0",
         "spatie/laravel-package-tools": "^1.13.0"
     },
     "require-dev": {
