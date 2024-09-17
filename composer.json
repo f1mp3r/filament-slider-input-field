@@ -1,5 +1,5 @@
 {
-    "name": "f1mp3r/filament-slider-input-field",
+    "name": "nettantra/filament-slider-input-field",
     "description": "This is a wrapper around noUiSlider which allows creating a slider field on Filament Forms.",
     "require": {
         "php": "^8.0|^8.1|^8.3",
