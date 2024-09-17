@@ -19,8 +19,8 @@ $suffixIcon = $getSuffixIcon();
 $suffixLabel = $getSuffixLabel();
 $statePath = $getStatePath();
 
-$min = floatval($getMinValue());
-$max = floatval($getMaxValue());
+$min = (int) $getMinValue();
+$max = (int) $getMaxValue();
 $twenty_percent = (($min+$max)*20)/100;
 $forty_percent = (($min+$max)*40)/100;
 $sixty_percent = (($min+$max)*60)/100;
@@ -29,17 +29,17 @@ $eighty_percent = (($min+$max)*80)/100;
 $range_slider_options = [
 'start' => $getState() ?? 0,
 'range' => [
-'min' => $min,
-'max' => $max
+    'min' => $min,
+    'max' => $max
 ],
 'connect' => [true, false],
 'behaviour' => 'tap-drag',
 'tooltips' => $getShowTooltips(),
-'step' => floatval($getStep()),
+'step' => (int) $getStep(),
 'pips' => [
-'mode' => 'range',
-'stepped' => true,
-'density' => 1
+    'mode' => 'range',
+    'stepped' => true,
+    'density' => 1
 ]
 ];
 
@@ -52,7 +52,7 @@ $field_id = str_replace('.', '-', $getId());
                 ->class(['overflow-hidden'])
         ">
         <div class="flex-1 relative">
-            <div class="filament-slider-input py-12 px-4 rounded border relative z-10" >
+            <div class="filament-slider-input py-12 px-6 relative z-10" >
                 <x-range-slider id="{{ $field_id }}" :options="$range_slider_options" :disabled="$isDisabled" wire:model.defer="{{ $getStatePath() }}" wire:key="oa-slider-{{ $field_id }}" />
                 @if ($isDisabled)
                 <div class="filament-slider-input-disable-block-ui absolute w-full h-full inset-0 z-10 cursor-not-allowed"></div>
