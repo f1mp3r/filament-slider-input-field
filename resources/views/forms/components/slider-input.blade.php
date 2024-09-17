@@ -27,13 +27,9 @@ $sixty_percent = (($min+$max)*60)/100;
 $eighty_percent = (($min+$max)*80)/100;
 
 $range_slider_options = [
-'start' => $getState(),
+'start' => $getState() ?? 0,
 'range' => [
 'min' => $min,
-'20%' => $twenty_percent,
-'40%' => $forty_percent,
-'60%' => $sixty_percent,
-'80%' => $eighty_percent,
 'max' => $max
 ],
 'connect' => [true, false],
